@@ -21,9 +21,7 @@ public class ProductController {
 
     @RequestMapping("/product/{id}")
     public String getProductById(@PathVariable Integer id, Model model) {
-
         model.addAttribute("product", productService.getProduct(id));
-
-        return productService.getProduct(id).toString();
+        return "product"; // This should match the actual Thymeleaf template file name.
     }
 }
